@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" onclick="showModal()" class="px-6 py-2 bg-green-500 w-[10%] rounded-md mx-auto text-white text-xl">Add New</button>
+
+    <div id="modal" class="hidden border-2 my-10 justify-center flex w-fit mx-auto p-10 shadow shadow-black">
+        <form action="">
+            <input class="block my-2 border-2 w-full rounded-md border-black" placeholder="Name" type="text"> 
+            <input class="block my-2 border-2 w-full rounded-md border-black" placeholder="Email" type="text"> 
+            <input class="block my-2 border-2 w-full rounded-md border-black" placeholder="Phone" type="text">
+            <input class="block my-2 border-2 w-full rounded-md border-black" placeholder="Example" type="file">
+<div class="flex justify-between">
+    <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded-md">Submit</button>
+    <button type="submit" onclick="hideModal()" class="px-4 py-2 bg-red-500 text-white rounded-md">Cancel</button>
+</div>
+
+            
+        </form>
+    </div>
+
+    <script>
+        function showModal() {
+            var modal = document.getElementById("modal");
+            modal.classList.toggle("hidden");
+        }
+
+        function hideModal(){
+            var modal = document.getElementById("modal");
+            modal.classList.add("hidden");
+        }
+    </script>
+</body>
+</html>
